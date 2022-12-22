@@ -1,43 +1,122 @@
-body{ 
-    background-color: #333;
+body{
+    background-color: #5f6796;
 }
 #main{
-    min-height: 400px;
-    width: 80%;
-    border: 2px solid turquoise;
-    border-radius: 12px;
-    margin-left: 10%;
-    margin-top: 5%;
-}
-#home{
-    width: 50%;
-    box-sizing: border-box;
-    display: inline-block;
-    border-right: 1px solid turquoise;
-
-}
-#away{
-    width: 50%;
-    box-sizing: border-box;
-    display: inline-block;
-    margin-left: 50%;
-}
-#events{
-    border: 2px solid turquoise;
+    border: 2px solid #5011ff;
     border-radius: 10px;
+    width: 60%;
+    min-height: 800px;
+    margin-left: 7.5%;
     margin-top: 5%;
-    width: 80%;
-    margin-left: 10%;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: white;
+    color: #5011ff;
+    text-align: center;
+}
+#second-main{
+    border: 2px solid #5011ff;
+    width: 20%;
+    border-radius: 10px;
+    min-height: 800px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    display: inline-block;
+    box-sizing: border-box;
+    float: right;
+    background-color: white;
+    color: #5011ff;
+    font-weight: bold;
+}
+.second-buttons{
+    color: #5011ff;
+    border: 2px solid #5011ff;
+    border-radius: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5%;
+}
+.second-buttons:hover{
     color: white;
+    background-color: #5011ff;
+    cursor: pointer;
 }
 #searchproperties{
-    border-left: 2px solid turquoise;
+    margin-top: 5%;
+    text-align: center;
+}
+input{
+    color: #5011ff;
+    border: 2px solid #5011ff;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 2.5%;
+}
+input:active{
+    border: 2px solid #5011ff;
+}
+#h-elvalaszto{
+    width: 100%;
+    min-height: 2px;
+    max-height: 2px;
+    background-color: #5011ff;
+}
+#home{
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    height: 720px;
+    border-right: 2px solid #5011ff;
+}
+#away{
+    float: right;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    height: 720px;
 }
 select{
-    border: 2px solid turquoise;
-    background-color: #333;
-    color: turquoise;
-    border-radius: 5px;
-    margin-top: 1%;
-    margin-left: 1%;
+    color: #5011ff;
+    border: 2px solid #5011ff;
+    font-size: 25px;
+    margin-top: 5%;
+}
+select:active{
+    color: #5011ff;
+    border: 2px solid #5011ff;
+}
+.home-players{
+    min-height: 200px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 5%;
+    display: block;
+}
+.players-box{
+    width: 40%;
+    border: 2px solid #5011ff;
+    min-height: 200px;
+    margin-top: 2.5%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.team-change{
+    border: 2px solid #5011ff;
+    color: #5011ff;
+    font-size: 30px;
+    margin-top: 15%;
+}
+.points{
+    margin-top: 5%;
+}
+.events{
+    border: 2px solid #5011ff;
+    width: 90%;
+    min-height: 200px;
+    margin-top: 5%;
+    margin-left: 5%;
 }
