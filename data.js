@@ -15,6 +15,7 @@ var teams = [
     "ZTE"];
 
 var jatekosok = [
+    //csapat, mezszám, név, születés, idk(talán poszt), magasság, súly
     ['FALCO',1, 'HORVÁTH Ádám',2004,12,193,90],
     ['FALCO',2, 'HANSEN Dániel',2004,23,191,80],
     ['FALCO',3, 'BROWN Zachary Garrett',1995,3,198,97],
@@ -218,7 +219,15 @@ var jatekosok = [
     ['ZTE',41, 'CSUTI Kornél',2004,5,203,95]
 ];
 
-
+var homepoints = [];
+//pont hozzáadás
+function homepointadd(){
+    const point = document.getElementById('home-point').value;
+    console.log(point);
+    homepoints.push(point);
+    console.log(homepoints);
+}
+//informacios div 
 function informationon() {
     console.log("asdfas");
     const information = document.getElementById('information').style.display = "block";;
@@ -227,7 +236,7 @@ function informationoff() {
     console.log("asdfas");
     const information = document.getElementById('information').style.display = "none";;
 }
-
+//box feltoltesek
 function add() {
     const hometeam = document.getElementById('home-team');
     const awayteam = document.getElementById('away-team');
