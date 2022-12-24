@@ -229,28 +229,17 @@ function homepointadd(){
 }
 //informacios div 
 function informationon() {
-    console.log("asdfas");
-    const information = document.getElementById('information').style.display = "block";;
+    const information = document.getElementById('information').style.display = "block";
 }
 function informationoff() {
-    console.log("asdfas");
-    const information = document.getElementById('information').style.display = "none";;
+    const information = document.getElementById('information').style.display = "none";
 }
-//box feltoltesek
-function add() {
-    const hometeam = document.getElementById('home-team');
-    const awayteam = document.getElementById('away-team');
-    const boxes = document.getElementById('players-box');
+function teamadd(){
     
-    //home team feltöltés
-    for (let i = 0; i < teams.length; i++) {
-        hometeam.add(new Option(teams[i]));
-    }
-    //away team feltöltés
-    for (let i = 0; i < teams.length; i++) {
-        awayteam.add(new Option(teams[i]));
-    }
-
+    
+const hometeam = document.getElementById('home-team');
+const awayteam = document.getElementById('away-team');
+const boxes = document.getElementById('players-box');
     var e = "<hr/>";   
     
     for (var y=0; y<jatekosok.length; y++)
@@ -260,4 +249,22 @@ function add() {
         }
     }
     document.getElementById("Result").innerHTML = e;
+    console.log(hometeam.value);
+
+}
+//box feltoltesek
+function add() {
+    
+
+const hometeam = document.getElementById('home-team');
+const awayteam = document.getElementById('away-team');
+const boxes = document.getElementById('players-box');
+    //home team feltöltés
+    for (let i = 0; i < teams.length; i++) {
+        hometeam.add(new Option(teams[i]));
+    }
+    //away team feltöltés
+    for (let i = 0; i < teams.length; i++) {
+        awayteam.add(new Option(teams[i]));
+    }
 }
