@@ -9,7 +9,7 @@
     <link rel="website icon" type="png" href="images/basketball.png">
     <script src="data.js"></script>
 </head>
-<body onload="add()">
+<body onload="add(), hometeamadd(), awayteamadd()">
     <img style="width: 50px; display: inline-block; box-sizing: border-box; float: right;" src="images/dev.png" onmouseover="informationon()" onmouseleave="informationoff()" alt="">
     <div id="information">
         <h2 class="infotext">Fejlesztők:</h2>
@@ -20,13 +20,17 @@
         <h1>Kosárlabda mérkőzés jegyzőkönyv</h1>
         <div id="h-elvalaszto"></div>
         <div id="home">
-            <select id="home-team" onchange="teamadd()">
+            <select id="home-team" onchange="hometeamadd()">
             </select>
             <div class="home-players">
-                <div class="players-box" style="float: left; margin-left: -1px;"></div>
+                <div class="players-box" style="float: left; margin-left: -1px;">
+                    <div id="homesubtitutes"></div>
+                </div>
                 <button class="team-change">>></button>
                 <button class="team-change"><<</button>
-                <div class="players-box" style="float: right;"></div>
+                <div class="players-box" style="float: right;">
+                    <div id="homeplayers"></div> 
+                </div>
             </div>
             <div class="points">
                 <label for="home-point" style="font-size: 30px;">Point:</label>
@@ -38,20 +42,19 @@
                 <button class="point-buttons" style="border: 2px solid red; color: red; font-size: 25px; margin-top: 2.5%;">X</button>
                 <button class="point-buttons" onclick="homepointadd()" id="plus-homepoint" style="border: 2px solid green; color: green; font-size: 21.5px; margin-top: 2.5%; margin-left: 5%;">✓</button>
             </div>
-            <div class="events">
-
-            </div>
         </div>
         <div id="away">
-            <select id="away-team" onchange="">
+            <select id="away-team" onchange="awayteamadd()">
             </select>
             <div class="home-players">
                 <div class="players-box" id="players-box" style="float: left;">
-                    <div id="Result"></div> 
+                    <div id="awaysubtitutes"></div>
                 </div>
                 <button class="team-change">>></button>
                 <button class="team-change"><<</button>
-                <div class="players-box" style="float: right;"></div>
+                <div class="players-box" style="float: right;">
+                    <div id="awayplayers"></div>
+                </div>
             </div>
             <div class="points">
                 <label for="away-point" style="font-size: 30px;">Point:</label>
@@ -63,15 +66,20 @@
                 <button class="point-buttons" style="border: 2px solid red; color: red; font-size: 25px; margin-top: 2.5%;">X</button>
                 <button class="point-buttons" style="border: 2px solid green; color: green; font-size: 21.5px; margin-top: 2.5%; margin-left: 5%;">✓</button>
             </div>
-            <div class="events">
+        </div>
+        <div class="events">
 
-            </div>
         </div>
     </div>
     <div id="second-main">
         <div id="searchproperties">
             <label for="helyszin">Choose a court:</label>
-            <input type="text" name="helyszin" id="helyszin"> <br>
+            <select name="referee" id="referee" >
+                <option value="">Budapest Basketball Court</option>
+                <option value="">Győr Basketball Court</option>
+                <option value="">Pécs Basketball Court</option>
+                <option value="">Veresegyház Basketball Court</option>
+            </select><br>
             <label for="date">Choose a date:</label>
             <input type="date" name="date" id="date"><br>
             <label for="referee">Choose a referee:</label>

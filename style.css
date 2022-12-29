@@ -2,10 +2,13 @@ body{
     background-image: url("images/wallpaper.png");
     font-weight: bold;
 }
+::-webkit-scrollbar {
+    color: #f58051;
+}
 #main{
     border-radius: 20px;
     width: 60%;
-    min-height: 800px;
+    min-height: 1000px;
     margin-left: 5.5%;
     margin-top: 5%;
     display: inline-block;
@@ -17,7 +20,7 @@ body{
 #second-main{
     width: 20%;
     border-radius: 20px;
-    min-height: 800px;
+    min-height: 1080px;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
@@ -81,7 +84,7 @@ input:active{
     display: inline-block;
     box-sizing: border-box;
     width: 50%;
-    height: 720px;
+    height: 680px;
     border-right: 2px solid #303030;
 }
 #away{
@@ -96,6 +99,7 @@ select{
     border: 2px solid #303030;
     font-size: 25px;
     margin-top: 5%;
+    text-align: center;
 }
 select:active{
     color: #303030;
@@ -132,9 +136,10 @@ select:active{
 .events{
     border: 2px solid #303030;
     width: 90%;
-    min-height: 200px;
-    margin-top: 0%;
+    min-height: 300px;
+    margin-top: 60%;
     margin-left: 5%;
+    margin-bottom: 5%;
 }
 #information{
     width: 30%;

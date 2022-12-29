@@ -73,22 +73,22 @@ var jatekosok = [
     ['BUDAPEST',27, 'CSOMÓS Kristóf',2002,2,192,82],
     ['BUDAPEST',44, 'TARJÁN Izsák Simon',2002,4,200,98],
     ['BUDAPEST',95, 'RÉDEI Péter',2002,2,190,81],
-    ['DEAC',0, 'FÁBIÁN Szabolcs',2000,5,212,103],
-    ['DEAC',0, 'HŐGYE Patrik',2005,2,195,90],
-    ['DEAC',0, 'KOVÁCS Ákos Bence',2003,4,205,101],
-    ['DEAC',0, 'SÁGODI Róbert',2004,1,190,83],
-    ['DEAC',1, 'TAYLOR JR Jimmie Lee',1995,5,210,110],
-    ['DEAC',5, 'GUMBS Nathanial Keenan',1996,3,195,90],
-    ['DEAC',6, 'POLYÁK László',1993,2,192,95],
-    ['DEAC',7, 'NEUWIRTH Bence',2002,2,192,90],
-    ['DEAC',9, 'BALÁZSI Soma Bence',2001,3,195,95],
-    ['DEAC',10, 'KENÉZ Csaba',2002,1,192,85],
-    ['DEAC',12, 'SCOTT Michaelyn Duane',1993,1,184,92],
-    ['DEAC',13, 'DRENOVAC Djordje',1992,3,198,100],
-    ['DEAC',17, 'GÁSPÁR Mátyás',2000,4,198,100],
-    ['DEAC',20, 'GARAMVÖLGYI Ákos Tibor',1994,4,203,105],
-    ['DEAC',21, 'TÓTH Ádám',1989,5,208,115],
-    ['DEAC',24, 'MÓCSÁN Bálint',1997,2,192,90],
+    ['DEBRECEN',0, 'FÁBIÁN Szabolcs',2000,5,212,103],
+    ['DEBRECEN',0, 'HŐGYE Patrik',2005,2,195,90],
+    ['DEBRECEN',0, 'KOVÁCS Ákos Bence',2003,4,205,101],
+    ['DEBRECEN',0, 'SÁGODI Róbert',2004,1,190,83],
+    ['DEBRECEN',1, 'TAYLOR JR Jimmie Lee',1995,5,210,110],
+    ['DEBRECEN',5, 'GUMBS Nathanial Keenan',1996,3,195,90],
+    ['DEBRECEN',6, 'POLYÁK László',1993,2,192,95],
+    ['DEBRECEN',7, 'NEUWIRTH Bence',2002,2,192,90],
+    ['DEBRECEN',9, 'BALÁZSI Soma Bence',2001,3,195,95],
+    ['DEBRECEN',10, 'KENÉZ Csaba',2002,1,192,85],
+    ['DEBRECEN',12, 'SCOTT Michaelyn Duane',1993,1,184,92],
+    ['DEBRECEN',13, 'DRENOVAC Djordje',1992,3,198,100],
+    ['DEBRECEN',17, 'GÁSPÁR Mátyás',2000,4,198,100],
+    ['DEBRECEN',20, 'GARAMVÖLGYI Ákos Tibor',1994,4,203,105],
+    ['DEBRECEN',21, 'TÓTH Ádám',1989,5,208,115],
+    ['DEBRECEN',24, 'MÓCSÁN Bálint',1997,2,192,90],
     ['KECSKE',3, 'TOWNES Marques R',1995,1,193,95],
     ['KECSKE',4, 'TÓTH Balázs',2003,3,194,81],
     ['KECSKE',5, 'TAKÁCS Erik',2002,4,200,88],
@@ -234,31 +234,36 @@ function informationon() {
 function informationoff() {
     const information = document.getElementById('information').style.display = "none";
 }
-function teamadd(){
-    
-    
-const hometeam = document.getElementById('home-team');
-const awayteam = document.getElementById('away-team');
-const boxes = document.getElementById('players-box');
-    var e = "<hr/>";   
-    
+function hometeamadd(){
+    const hometeam = document.getElementById('home-team');
+
+    //home team jatekosok boxhoz
+    var e = "";   
     for (var y=0; y<jatekosok.length; y++)
     {
         if (jatekosok[y][0] == hometeam.value){
             e += "<div>" + jatekosok[y][2] + "</div>" + "<br/>";
         }
     }
-    document.getElementById("Result").innerHTML = e;
-    console.log(hometeam.value);
-
+    document.getElementById("homesubtitutes").innerHTML = e;
+}
+function awayteamadd(){
+    //away team jatekosok boxhoz
+    const awayteam = document.getElementById('away-team');
+    var i = ""; 
+    for (var y=0; y<jatekosok.length; y++)
+    {
+        if (jatekosok[y][0] == awayteam.value){
+            i += "<div>" + jatekosok[y][2] + "</div>" + "<br/>";
+        }
+    }
+    document.getElementById("awaysubtitutes").innerHTML = i;
 }
 //box feltoltesek
 function add() {
-    
-
-const hometeam = document.getElementById('home-team');
-const awayteam = document.getElementById('away-team');
-const boxes = document.getElementById('players-box');
+    const hometeam = document.getElementById('home-team');
+    const awayteam = document.getElementById('away-team');
+    const boxes = document.getElementById('players-box');
     //home team feltöltés
     for (let i = 0; i < teams.length; i++) {
         hometeam.add(new Option(teams[i]));
