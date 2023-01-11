@@ -219,6 +219,20 @@ var jatekosok = [
     ['ZTE',41, 'CSUTI Kornél',2004,5,203,95]
 ];
 
+var timeinsec = 0;
+var maxtime = 40;
+
+function millisec(){
+        var inst = setInterval(time, 1000);
+}
+
+function time(){
+    if (timeinsec != maxtime){
+        timeinsec++;
+        console.log(timeinsec);
+    }
+}
+
 var homepoints = [];
 //pont hozzáadás
 function homepointadd(){
