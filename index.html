@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kosárlabda</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="website icon" type="png" href="images/basketball.png">
-    <script src="data.js"></script>
+    <link rel="stylesheet" href="cssFiles/style.css">
+    <link rel="website icon" type="png" href="image/basketball.png">
+    <script src="jsFiles/data.js"></script>
+    <script src="jsFiles/jquery-3.6.0.min.js"></script>
 </head>
-<body onload="add(), hometeamadd(), awayteamadd()">
-    <img style="width: 50px; display: inline-block; box-sizing: border-box; float: right;" src="images/dev.png" onmouseover="informationon()" onmouseleave="informationoff()" alt="">
+<body onload="add(), hometeamadd(), awayteamadd()" style="background-image: url(image/wallpaper.png);">
+    <img style="width: 50px; display: inline-block; box-sizing: border-box; float: right;" src="image/dev.png" onmouseover="informationon()" onmouseleave="informationoff()" alt="">
     <div id="information">
         <h2 class="infotext">Fejlesztők:</h2>
         <h2 class="infotext">Fellner Milán</h2>
@@ -92,4 +93,20 @@
         </div>
     </div>
 </body>
+<script>
+    $('#stop_button').click(function(){
+            $.post('/stop_button')
+    });
+    $('#home-team').change(function(){
+        $.post('/home_team_dropdown')
+    });
+    $('#away-team').change(function(){
+        $.post('/away_team_dropdown')
+    });
+    fetch('http://localhost:1337/stop_button')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            });
+</script>
 </html>
