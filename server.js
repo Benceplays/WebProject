@@ -39,4 +39,3 @@ con.query('SELECT * FROM login', (err,rows) => {
             console.log(`${row.username} lives in ${row.email}`);
         });
 });
-*/

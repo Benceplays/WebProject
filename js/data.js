@@ -218,8 +218,6 @@ var jatekosok = [
     ['ZTE',27, 'SZALAY Domonkos',2005,2,190,85],
     ['ZTE',41, 'CSUTI Kornél',2004,5,203,95]
 ];
-
-
 var timeinsec = 0;
 var maxtime = 40;
 
@@ -262,6 +260,11 @@ function hometeamadd(){
     }
     document.getElementById("homesubtitutes").innerHTML = e;
 }
+import('./../server.js');
+let asd2 = asd;
+
+console.log(asd2)
+
 function awayteamadd(){
     //away team jatekosok boxhoz
     const awayteam = document.getElementById('away-team');
