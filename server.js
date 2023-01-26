@@ -38,4 +38,4 @@ con.query('SELECT * FROM login', (err,rows) => {
         rows.forEach(function(row){
             console.log(`${row.username} lives in ${row.email}`);
         });
-});
+});*/
