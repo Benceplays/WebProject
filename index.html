@@ -57,6 +57,7 @@
                     <div id="awayplayers"></div>
                 </div>
             </div>
+            <form action="server.js" method="post">
             <div class="points">
                 <label for="away-point" style="font-size: 30px;">Point:</label>
                 <select name="away-point" id="away-point" >
@@ -67,6 +68,7 @@
                 <button class="point-buttons" style="border: 2px solid red; color: red; font-size: 25px; margin-top: 2.5%;">X</button>
                 <button class="point-buttons" style="border: 2px solid green; color: green; font-size: 21.5px; margin-top: 2.5%; margin-left: 5%;">✓</button>
             </div>
+            </form>
         </div>
         <div class="events">
 
@@ -95,18 +97,24 @@
 </body>
 <script>
     $('#stop_button').click(function(){
-            $.post('/stop_button')
+        $.post('/stop_button')
     });
-    $('#home-team').change(function(){
-        $.post('/home_team_dropdown')
+    $('#hometeam').change(function(){
+        $.post("/home_team_dropdown",
+         {
+            name: "viSion",
+            designation: "Professional gamer"
+         });
     });
     $('#away-team').change(function(){
         $.post('/away_team_dropdown')
     });
+    /*
     fetch('http://localhost:1337/stop_button')
             .then(response => response.json())
             .then(data => {
                 console.log(data);
             });
+    */
 </script>
 </html>

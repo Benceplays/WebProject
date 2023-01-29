@@ -14,6 +14,13 @@ app.post('/stop_button', function (req, res) {
 });
 app.post('/home_team_dropdown', function (req, res) {
     console.log('valasztva');
+    console.log(req.query.hometeam);
+    res.json([{
+        name_recieved: req.body.name,
+        designation_recieved: req.body.designation
+     }])
+     console.log(name_recieved)
+     console.log(designation_recieved)
 });
 app.post('/away_team_dropdown', function (req, res) {
     console.log('valasztvaaway');

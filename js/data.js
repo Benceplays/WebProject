@@ -260,10 +260,7 @@ function hometeamadd(){
     }
     document.getElementById("homesubtitutes").innerHTML = e;
 }
-import('./../server.js');
-let asd2 = asd;
 
-console.log(asd2)
 
 function awayteamadd(){
     //away team jatekosok boxhoz
