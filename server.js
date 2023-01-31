@@ -232,7 +232,7 @@ app.get('/', function(req, resp) {
 app.post('/homepointadd', function (req, res) {
     const data = { name: 'John', age: 30 };
     res.json(data);
-    console.log(req.body.Awaypoint);
+    console.log(req.Awaypoint);
 });
 app.post('/home_team_dropdown', function (req, res) {
     console.log('valasztva');
