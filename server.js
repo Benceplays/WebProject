@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+const bodyParser = require('body-parser');
 var app = express();
 
 var teams = [
@@ -226,13 +227,15 @@ var jatekosok = [
 app.use('/jsFiles', express.static(__dirname + '/js'));
 app.use('/cssFiles', express.static(__dirname + '/css'));
 app.use('/image', express.static(__dirname + '/images'));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/', function(req, resp) {
     resp.sendFile('index.html', {root: path.join(__dirname, './')});
 });
+
 app.post('/homepointadd', function (req, res) {
     const data = { name: 'John', age: 30 };
     res.json(data);
-    console.log(req.Awaypoint);
+    console.log(req.body.Awaypoint);
 });
 app.post('/home_team_dropdown', function (req, res) {
     console.log('valasztva');
